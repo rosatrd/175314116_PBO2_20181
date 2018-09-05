@@ -14,15 +14,14 @@ import java.util.Date;
  */
 public class Dokter {
 
-    private String nomorPegawai;
-    private String nama;
-    private String alamat;
-    private String Tempatlahir;
-    private int Tanggallahir;
-    private int bulanLahir;
-    private int tahunLahir;
-//    private String nomorPegawai, nama,alamat, tempatLahir;
-//private int tanggalLahir, bulanLahir, tahunLahir;
+    private String nomorPegawai; // mendeklarasikan variable nomorpegawai dengan tipe data string .
+    private String nama;// mendeklarasikan variable nama dengan tipe data string .
+    private String alamat;// mendeklarasikan variable alamat dengan tipe data string .
+    private String Tempatlahir; // mendeklarasikan variable tempatlahir dengan tipe data string .
+    private int Tanggallahir; // mendeklarasikan variable tanggallahir dengan tipe data int .
+    private int bulanLahir; // mendeklarasikan variable bulanlahir dengan tipe data int .
+    private int tahunLahir; // mendeklarasikan variable tahunlahir dengan tipe data int .
+
 
     public Dokter() {
 

@@ -14,19 +14,19 @@ import java.util.Date;
  */
 public class Pasien {
 
-    private String noRekamNedis;
-    private String Nama;
-    private String Alamat;
-    private String tempatLahir;
-    private int tanggalLahir;
-    private int bulanLahir;
-    private int tahunLahir;
+    private String noRekamMedis; // mendeklarasikan variable norekammedis dengan tipe data string ;
+    private String Nama; // mendeklarasikan variable nama dengan tipe data string .
+    private String Alamat; // mendeklarasikan variable alamat dengan tipe data string .
+    private String tempatLahir;// mendeklarasikan variable tempatlahir dengan tipe data string .
+    private int tanggalLahir;// mendeklarasikan variable tanggallahir dengan tipe data int .
+    private int bulanLahir;// mendeklarasikan variable bulanlahir dengan tipe data int .
+    private int tahunLahir;// mendeklarasikan variable tahunlahir dengan tipe data int .
 
-   public Pasien (){
+   public Pasien (){ //
    }
 
-    public void setNoRekamNedis(String noRekamNedis) {
-        this.noRekamNedis = noRekamNedis;
+    public void setNoRekamMedis(String noRekamNedis) {
+        this.noRekamMedis = noRekamMedis;
     }
 
     public void setNama(String Nama) {
@@ -66,8 +66,8 @@ public class Pasien {
 
     }
 
-    public String getNoRekamNedis() {
-        return noRekamNedis;
+    public String getNoRekamMedis() {
+        return noRekamMedis;
     }
 
     public String getNama() {
