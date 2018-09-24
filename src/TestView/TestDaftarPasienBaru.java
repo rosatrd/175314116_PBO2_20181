@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package TestView;
 
-import Model.Pasien;
+import View.MainPasienBaru;
 
 /**
  *
  * @author Rosa
  */
-public class MainKelasPasienuntuktambah {
+public class TestDaftarPasienBaru {
+
     public static void main(String[] args) {
-        Pasien test = new Pasien();
-        'puspa', // nama pasie ;
-        
+        MainPasienBaru test = new MainPasienBaru();
+        test.setSize(400, 350);
+        test.setVisible(true);
+        test.setTitle("Daftar Pasien Baru");
+
     }
-    
 }

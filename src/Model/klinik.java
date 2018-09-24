@@ -9,21 +9,17 @@ package Model;
  *
  * @author admin
  */
-public class klinik extends Pasien  {
-   
-    private String nama ; // mendeklarasikan variable nama  dengan tipe data string ;
-    private String idklinik ;// mendeklarasikan variable idklinik dengan tipe data string ;
+public class klinik  {
 
-    public klinik() { // membuat constructor dengan parameter kosong yang akan otomatis dipanggil jika suatu objek dibuat
-        
-    }
-  
+    private String nama; // mendeklarasikan variable nama  dengan tipe data string ;
+    private String idklinik;// mendeklarasikan variable idklinik dengan tipe data string ;
+
     public String getNama() { // memanggil method getNama dengan tipe data string.
         return nama;// Pengembalian nilai pada fungsi menggunakan kata kunci return.
     }
 
     public void setNama(String nama) { // mengisi data ke dalam atribut.
-       this.nama = nama; // menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri
+        this.nama = nama; // menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri
     }
 
     public String getIdklinik() { // memanggil method getIdklinik dengan tipe data string.
@@ -34,4 +30,3 @@ public class klinik extends Pasien  {
         this.idklinik = idklinik;//menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri
     }
 }
-

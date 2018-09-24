@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Rosa
  */
-public class Dokter  extends Pasien{
+public class Dokter {
 
     private String nomorPegawai; // mendeklarasikan variable nomorpegawai dengan tipe data string .
     private String nama;// mendeklarasikan variable nama dengan tipe data string .
@@ -22,7 +22,6 @@ public class Dokter  extends Pasien{
     private int bulanLahir; // mendeklarasikan variable bulanlahir dengan tipe data int .
     private int tahunLahir; // mendeklarasikan variable tahunlahir dengan tipe data int .
 
-
     public Dokter() { //membuat constructor dengan parameter kosong yang akan otomatis dipanggil jika suatu objek dibuat
 
     }
@@ -31,8 +30,13 @@ public class Dokter  extends Pasien{
         return nomorPegawai; //Pengembalian nilai pada fungsi menggunakan kata kunci return.
     }
 
-    public void setNomorPegawai(String nomorPegawai) { // mengisi data ke dalam atribut.
-        this.nomorPegawai = nomorPegawai;
+    public void setNomorPegawai(String nomorPegawai) throws NumberFormatException { // mengisi data ke dalam atribut.
+        if (nomorPegawai.length() >= 6) {//dalam langkah ini jika NomorPegawai lebih besar sama dengan 6 dan benar, maka dia akan berhenti dan mencetaknya
+            this.nomorPegawai = nomorPegawai;
+        } else {
+            throw new NumberFormatException("nomor pegawai anda salah.");//dan jika data nomor pegawai salah maka fungsi dari throw new NumberFormatException tsb akan bekerja dan mencetak bahwa noomor pegawai tsb salah
+        }
+
     }
 
     public String getNama() { // memanggil method getNama dengan tipe data string.
@@ -59,12 +63,22 @@ public class Dokter  extends Pasien{
         this.Tempatlahir = Tempatlahir;// menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri .
     }
 
-    public int getTanggallahir() { // memanggil method getTanggalLahir dengan tipe data int.
-        return Tanggallahir;//Pengembalian nilai pada fungsi menggunakan kata kunci return.
+    public void getTanggalKelahiran() {
+        Date tanggalKelahiran = new Date(getTahunLahir() - 1990, getBulanLahir() - 1, getTanggalLahir());
+        SimpleDateFormat ft = new SimpleDateFormat("dd-MM-yyyy");
+        System.out.println(ft.format(tanggalKelahiran));
     }
 
-    public void setTanggallahir(int Tanggallahir) {// mengisi data ke dalam atribut.
-        this.Tanggallahir = Tanggallahir;// menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri .
+    public int getTanggalLahir() {//method getTanggalLahir bertipe data integer yang akan mengembalikan variabel tanggalLahir
+        return Tanggallahir;
+    }
+
+    public void setTanggallahir(int Tanggallahir) throws NumberFormatException {// mengisi data ke dalam atribut.
+        if (Tanggallahir > 0 && Tanggallahir < 32) {
+            this.Tanggallahir = Tanggallahir;// menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri .
+        } else {
+            throw new NumberFormatException("salah ditanggalnya");//dan jika data tanggalLahir salah maka fungsi dari throw new NumberFormatException tsb akan bekerja dan mencetak bahwa tanggalLahir tsb salah
+        }
     }
 
     public int getBulanLahir() { // memanggil method getBulanLahir dengan tipe data int.
@@ -84,10 +98,12 @@ public class Dokter  extends Pasien{
     }
 
     public void getKelahiran() { // memanggil method getKelahiran dengan tipe data void.
-        Date Tanggallahir = new Date(getTahunLahir() - 1900, getBulanLahir() - 1, getTanggallahir());// mengeset data tahun lahir, bulan lahir dan tanggal lahir
-        SimpleDateFormat ft = new SimpleDateFormat("ddMMyyyy");// membuat tampilan atau format .
+        Date Tanggallahir = new Date(getTahunLahir() - 1900, getBulanLahir() - 1, getTanggalLahir() - 15);// mengeset data tahun lahir, bulan lahir dan tanggal lahir
+        SimpleDateFormat ft = new SimpleDateFormat("dd-MM-yyyy");// membuat tampilan atau format .
         System.out.println(ft.format(Tanggallahir));// menampilkan data sesuai dengan format yang telah di buat.
 
     }
+
 }
+
 //     
