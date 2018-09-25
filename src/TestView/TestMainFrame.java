@@ -13,7 +13,8 @@ import javax.swing.JFrame;
  * @author Rosa
  */
 public class TestMainFrame {
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
         // TODO code application logic here
         MainFrame mf = new MainFrame();
         mf.setSize(600, 500);

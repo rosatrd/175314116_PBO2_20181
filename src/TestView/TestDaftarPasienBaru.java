@@ -5,7 +5,8 @@
  */
 package TestView;
 
-import View.MainPasienBaru;
+import View.DaftarPasienBaru;
+import javax.swing.JFrame;
 
 /**
  *
@@ -14,10 +15,10 @@ import View.MainPasienBaru;
 public class TestDaftarPasienBaru {
 
     public static void main(String[] args) {
-        MainPasienBaru test = new MainPasienBaru();
+        DaftarPasienBaru test = new DaftarPasienBaru();
         test.setSize(400, 350);
         test.setVisible(true);
         test.setTitle("Daftar Pasien Baru");
-
+         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

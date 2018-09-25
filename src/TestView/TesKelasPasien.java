@@ -9,12 +9,26 @@ import Model.Pasien;
 import static com.sun.org.apache.regexp.internal.RETest.test;
 import static jdk.nashorn.internal.objects.NativeRegExp.test;
 import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
 
 /**
  *
  * @author Rosa
  */
-public class Tes_kelasPasien {
+public class TesKelasPasien {
 
     public static void main(String[] args) {
 

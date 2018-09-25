@@ -7,6 +7,7 @@ package TestView;
 
 import View.MainTambahAntrian;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
@@ -20,6 +21,7 @@ public class TestTambahAntrian  {
     MainTambahAntrian test = new MainTambahAntrian("Antrian Baru");
         test.setSize(600, 500);
         test.setVisible(true);
-    
+        test.setTitle("tambah antrian ");
+         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 }
 }
