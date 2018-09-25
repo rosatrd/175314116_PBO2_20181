@@ -27,11 +27,12 @@ public class Dokter {
     }
 
     public String getNomorPegawai() { // memanggil method getNomorPegawai dengan tipe data string.
+        String noPegawai = (nomorPegawai + nama.substring(0, 3));
         return nomorPegawai; //Pengembalian nilai pada fungsi menggunakan kata kunci return.
     }
 
-    public void setNomorPegawai(String nomorPegawai) throws NumberFormatException { // mengisi data ke dalam atribut.
-        if (nomorPegawai.length() >= 6) {//dalam langkah ini jika NomorPegawai lebih besar sama dengan 6 dan benar, maka dia akan berhenti dan mencetaknya
+    public void setNomorPegawai(String nomorPegawai) throws Exception { // mengisi data ke dalam atribut.
+        if (nomorPegawai.length() == 5) {//dalam langkah ini jika NomorPegawai lebih besar sama dengan 6 dan benar, maka dia akan berhenti dan mencetaknya
             this.nomorPegawai = nomorPegawai;
         } else {
             throw new NumberFormatException("nomor pegawai anda salah.");//dan jika data nomor pegawai salah maka fungsi dari throw new NumberFormatException tsb akan bekerja dan mencetak bahwa noomor pegawai tsb salah
@@ -104,6 +105,25 @@ public class Dokter {
 
     }
 
+    public void printInfo() {
+        System.out.println();
+        System.out.printf("%-20s", "");
+        System.out.println("Biodata Dokter" + "\n");
+        System.out.printf("%-25s", "Nomor Pegawai");
+        System.out.println(": " + getNomorPegawai());
+        System.out.printf("%-25s", "Nama");
+        System.out.println(": " + getNama());
+        System.out.printf("%-25s", "Alamat");
+        System.out.println(": " + getAlamat());
+        System.out.printf("%-25s", "Tempat, Tanggal Lahir");
+        System.out.print(": " + getTempatlahir() + ", ");
+        getKelahiran();
+        /*
+        dalam method ini kita dimudahkan saat akan menampilkan karena hanya memanggil method ini saja
+         */
+    }
 }
+
+
 
 //     

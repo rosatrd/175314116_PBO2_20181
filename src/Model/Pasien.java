@@ -24,11 +24,19 @@ public class Pasien {
     private int tanggalLahir;// mendeklarasikan variable tanggallahir dengan tipe data int .
     private int bulanLahir;// mendeklarasikan variable bulanlahir dengan tipe data int .
     private int tahunLahir;// mendeklarasikan variable tahunlahir dengan tipe data int .
-    private String nik;
+    private String nik = noRekamMedis ;
     public static ArrayList<Pasien> daftarPasienKlinik = new ArrayList<Pasien>();
 
+     public Pasien() {
+     }
+    
+    
     public Pasien(String puspa, String klaten, String medan, int i, int i0, int i1, String string) { //membuat constructor dengan parameter kosong yang akan otomatis dipanggil jika suatu objek dibuat
     }
+
+     
+
+   
 
     public String NoRekamMedis() {
         String noRekamMedis;
@@ -54,12 +62,8 @@ public class Pasien {
         return noRekamMedis; //Pengembalian nilai pada fungsi menggunakan kata kunci return.
     }
 
-    public void tambahPasienBaru(Pasien test) {
-        daftarPasienKlinik.add(bulanLahir, test);
-    }
-
-    public static void tambahPasien(Pasien test) {  //listing tambah elemen baru
-        Pasien.daftarPasienKlinik = daftarPasienKlinik;
+     public static void tambahPasien(Pasien pasien) {  //listing tambah elemen baru
+        daftarPasienKlinik.add(pasien);
 
     }
 
@@ -160,5 +164,17 @@ public class Pasien {
 
     public void setNik(String nik) {
         this.nik = nik;
+    }
+    public void printInfo() {
+        System.out.printf("%-25", "Nomor Rekam Medis Pasien");
+        System.out.println(":" + getNoRekamMedis());
+        System.out.printf("%-25s", "nama pasien ");
+        System.out.println(":" + getNama());
+        System.out.printf("%-25s", "tempat, tanggal lahir");
+        System.out.println(":" + getTempatLahir() + " , ");
+        getTanggalKelahiran();
+        System.out.printf("%-25s", "Alamat");
+        System.out.println(":" + getAlamat());
+        System.out.println("");
     }
 }
