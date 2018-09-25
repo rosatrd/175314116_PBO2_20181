@@ -9,6 +9,7 @@ import Model.Pasien;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -21,6 +22,9 @@ import javax.swing.JTextField;
  * @author Rosa
  */
 public class MainTambahAntrian extends JDialog implements ActionListener {
+   
+
+
 
     private JMenuBar menuBar;
     private JMenu fileMenu;
@@ -33,12 +37,8 @@ public class MainTambahAntrian extends JDialog implements ActionListener {
     private JTextField noRekamText;
     private JButton tambahButton;
 
-    public MainTambahAntrian() {
-        init();
-    }
-
     public MainTambahAntrian(String latihan_Dialog) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        init();
     }
 
     public void init() {
@@ -95,8 +95,9 @@ public class MainTambahAntrian extends JDialog implements ActionListener {
         }
         if (ae.getSource() == tambahButton) {
             Pasien cari = Pasien.cariPasien(noRekamText.getText());
-            for (int i = 0; i < Pasien.daftarPasien.size; i++) {
-                if (cari != Pasien.daftarPasien.get(i)) {
+          
+            for (int i = 0; i < Pasien.daftarPasienKlinik.size(); i++) {
+                if (cari != Pasien.daftarPasien) {
                 } else {
                     JOptionPane.showMessageDialog(null, "Nama Antrian Anda : " + (i + 1));
                     this.dispose();
@@ -105,10 +106,3 @@ public class MainTambahAntrian extends JDialog implements ActionListener {
         }
     }
 }
-
-//    @Override
-//    public void actionPerformed(ActionEvent ae) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//}
-

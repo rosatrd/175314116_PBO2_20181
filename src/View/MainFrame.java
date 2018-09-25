@@ -18,9 +18,14 @@ import javax.swing.JMenuItem;
  */
 public class MainFrame extends JFrame implements ActionListener {
 
-    JMenuBar menuBar; //Mendeklarasikan attribut menuBar dengan tipe data JMenuBar
-    JMenu fileMenu; //Mendeklarasikan attribut fileMenu dengan tipe data fileMenu
-    JMenuItem exitMenuItem;//Mendeklarasikan attribut exitMenuItem dengan tipe data JMenuItem
+  
+
+    JMenuBar menuBar;
+    //Mendeklarasikan attribut menuBar dengan tipe data JMenuBar
+    JMenu fileMenu;
+    //Mendeklarasikan attribut fileMenu dengan tipe data fileMenu
+    JMenuItem exitMenuItem;
+    //Mendeklarasikan attribut exitMenuItem dengan tipe data JMenuItem
     JMenuItem tambahPasien;
     JMenuItem tambahAntrian;
 
@@ -61,18 +66,16 @@ public class MainFrame extends JFrame implements ActionListener {
             System.exit(0);
         }
         if (aa.getSource() == tambahPasien) {
-            MainPasienBaru test = new MainPasienBaru ("Dialog baru");
+            DaftarPasienBaru test = new DaftarPasienBaru("Dialog Baru");
             test.setSize(600, 500);
             test.setVisible(true);
         }
         if (aa.getSource() == tambahAntrian) {
-            MainTambahAntrian test = new MainTambahAntrian("Latihan Dialog");
+            DaftarPasienBaru test = new DaftarPasienBaru("Latihan Dialog");
             test.setSize(600, 500);
             test.setVisible(true);
 
         }
     }
- }
-
-    
+   }
 
