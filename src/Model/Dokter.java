@@ -109,13 +109,13 @@ public class Dokter {
         System.out.println();
         System.out.printf("%-20s", "");
         System.out.println("Biodata Dokter" + "\n");
-        System.out.printf("%-25s", "Nomor Pegawai");
+        System.out.printf("%-20s", "Nomor Pegawai");
         System.out.println(": " + getNomorPegawai());
-        System.out.printf("%-25s", "Nama");
+        System.out.printf("%-20s", "Nama");
         System.out.println(": " + getNama());
-        System.out.printf("%-25s", "Alamat");
+        System.out.printf("%-20s", "Alamat");
         System.out.println(": " + getAlamat());
-        System.out.printf("%-25s", "Tempat, Tanggal Lahir");
+        System.out.printf("%-20s", "Tempat, Tanggal Lahir");
         System.out.print(": " + getTempatlahir() + ", ");
         getKelahiran();
         /*
