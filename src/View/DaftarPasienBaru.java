@@ -48,8 +48,7 @@ public class DaftarPasienBaru extends JFrame implements ActionListener {
     JButton saveButton;
 
     public DaftarPasienBaru() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+      }
 
     public JTextField getNikText() {
         return NikText;
