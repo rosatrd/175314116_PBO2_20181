@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TestView;
+package Test;
 
-import View.DaftarPasienBaru;
+import View.MainTambahAntrian;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 
 /**
  *
  * @author Rosa
  */
-public class TestDaftarPasienBaru {
-
+public class TestTambahAntrian  {
     public static void main(String[] args) {
-        DaftarPasienBaru test = new DaftarPasienBaru();
-        test.setSize(400, 350);
+       
+    MainTambahAntrian test = new MainTambahAntrian("Antrian Baru");
+        test.setSize(300,350);
         test.setVisible(true);
-        test.setTitle("Daftar Pasien Baru");
+        test.setTitle("tambah antrian ");
          test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+}
 }

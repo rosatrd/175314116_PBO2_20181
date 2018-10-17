@@ -5,9 +5,15 @@
  */
 package Model;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,6 +23,10 @@ public class Pasien {
 
     public static Object daftarPasien;
 
+    private static Object getDaftarPasien() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private String noRekamMedis; // mendeklarasikan variable norekammedis dengan tipe data string ;
     private String Nama; // mendeklarasikan variable nama dengan tipe data string .
     private String Alamat; // mendeklarasikan variable alamat dengan tipe data string .
@@ -24,19 +34,15 @@ public class Pasien {
     private int tanggalLahir;// mendeklarasikan variable tanggallahir dengan tipe data int .
     private int bulanLahir;// mendeklarasikan variable bulanlahir dengan tipe data int .
     private int tahunLahir;// mendeklarasikan variable tahunlahir dengan tipe data int .
-    private String nik = noRekamMedis ;
+    private String nik = noRekamMedis;
     public static ArrayList<Pasien> daftarPasienKlinik = new ArrayList<Pasien>();
 
-     public Pasien() {
-     }
-    
-    
+    public Pasien() {
+    }
+
     public Pasien(String puspa, String klaten, String medan, int i, int i0, int i1, String string) { //membuat constructor dengan parameter kosong yang akan otomatis dipanggil jika suatu objek dibuat
     }
 
-     
-
-   
 
     public String NoRekamMedis() {
         String noRekamMedis;
@@ -62,10 +68,7 @@ public class Pasien {
         return noRekamMedis; //Pengembalian nilai pada fungsi menggunakan kata kunci return.
     }
 
-     public static void tambahPasien(Pasien pasien) {  //listing tambah elemen baru
-        daftarPasienKlinik.add(pasien);
-
-    }
+    
 
     public static Pasien cariPasien(String noRM) { // listing cari elemen 
         for (int i = 0; i < daftarPasienKlinik.size(); i++) {
@@ -78,6 +81,8 @@ public class Pasien {
 
         return null;
     }
+
+   
 
     public void setNama(String Nama) { // mengisi data ke dalam atribut.
         this.Nama = Nama;// menunjukkan bahwa atribut yang ditunjuk merupakan atribut dari kelas itu sendiri .
@@ -165,6 +170,7 @@ public class Pasien {
     public void setNik(String nik) {
         this.nik = nik;
     }
+
     public void printInfo() {
         System.out.printf("%-25", "Nomor Rekam Medis Pasien");
         System.out.println(":" + getNoRekamMedis());
@@ -177,4 +183,32 @@ public class Pasien {
         System.out.println(":" + getAlamat());
         System.out.println("");
     }
+
+
+    public static void simpanDaftarPasien(File file) throws FileNotFoundException, IOException {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            for (int i = 0; i < DaftarPasien.size(); i++) {
+                String data = DaftarPasien.get(i).toString();
+                fos.write(data.getBytes());
+            }
+            fos.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    public static void bacaDaftarPasien(File file){
+        
+    }
+    public static Object getDaftarPasien(File file){
+        return null ;
+    }
+@Override
+public String toString(){
+        String alamat;
+    return String.format("nama pasien : " + Nama + "\n" + "alamat pasien : " + Alamat + "\n");
+}
 }

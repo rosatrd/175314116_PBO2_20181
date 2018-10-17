@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -20,16 +21,16 @@ public class MainFrame extends JFrame implements ActionListener {
 
   
 
-    JMenuBar menuBar;
+    private JMenuBar menuBar;
     //Mendeklarasikan attribut menuBar dengan tipe data JMenuBar
-    JMenu fileMenu;
+    private JMenu fileMenu;
     //Mendeklarasikan attribut fileMenu dengan tipe data fileMenu
-    JMenuItem exitMenuItem;
+    private JMenuItem exitMenuItem;
     //Mendeklarasikan attribut exitMenuItem dengan tipe data JMenuItem
-    JMenuItem tambahPasien;
-    JMenuItem tambahAntrian;
+    private JMenuItem tambahPasien;
+    private JMenuItem tambahAntrian ;
 
-    public MainFrame() {
+    public MainFrame() throws HeadlessException {
         init();
     }
 
@@ -57,6 +58,8 @@ public class MainFrame extends JFrame implements ActionListener {
         exitMenuItem.addActionListener(this);
         tambahPasien.addActionListener(this);
         tambahAntrian.addActionListener(this);
+        
+         this.setJMenuBar(menuBar);
     }
 
     @Override
@@ -71,7 +74,7 @@ public class MainFrame extends JFrame implements ActionListener {
             test.setVisible(true);
         }
         if (aa.getSource() == tambahAntrian) {
-            DaftarPasienBaru test = new DaftarPasienBaru("Latihan Dialog");
+            MainTambahAntrian test = new MainTambahAntrian("Latihan Dialog");
             test.setSize(600, 500);
             test.setVisible(true);
 

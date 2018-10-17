@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TestView;
+package Test;
 
 import Model.Pasien;
 import static com.sun.org.apache.regexp.internal.RETest.test;

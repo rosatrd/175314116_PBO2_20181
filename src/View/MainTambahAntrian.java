@@ -75,7 +75,7 @@ public class MainTambahAntrian extends JDialog implements ActionListener {
         alamatText.addActionListener(this);
 
         tambahButton = new JButton("TAMBAH");
-        tambahButton.setBounds(120, 250, 80, 25);
+        tambahButton.setBounds(120, 250, 90, 25);
         this.add(tambahButton);
         tambahButton.addActionListener(this);
 
